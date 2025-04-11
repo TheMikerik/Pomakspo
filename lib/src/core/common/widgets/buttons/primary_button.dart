@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/src/core/common/providers/haptic_feedback_provider.dart';
-import 'package:flutter_boilerplate/src/core/extensions/theme_data_extension.dart';
+import 'package:pomakspo/src/core/common/providers/haptic_feedback_provider.dart';
+import 'package:pomakspo/src/core/extensions/theme_data_extension.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class PrimaryButton extends ConsumerWidget {

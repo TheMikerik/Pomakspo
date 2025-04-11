@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/src/core/routing/app_startup.dart';
-import 'package:flutter_boilerplate/src/core/routing/scaffold_with_nested_navigation.dart';
-import 'package:flutter_boilerplate/src/features/auth/presentation/auth_screen.dart';
-import 'package:flutter_boilerplate/src/features/home/presentation/home_screen.dart';
-import 'package:flutter_boilerplate/src/features/settings/presentation/settings_screen.dart';
+import 'package:pomakspo/src/core/routing/app_startup.dart';
+import 'package:pomakspo/src/core/routing/scaffold_with_nested_navigation.dart';
+import 'package:pomakspo/src/features/auth/presentation/auth_screen.dart';
+import 'package:pomakspo/src/features/home/presentation/home_screen.dart';
+import 'package:pomakspo/src/features/settings/presentation/settings_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';

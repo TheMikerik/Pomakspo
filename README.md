@@ -1,71 +1,21 @@
-# Flutter Boilerplate 🚀
+# Pomakspo – Gamified Fitness App with a Charitable Impact
 
-A clean and scalable Flutter boilerplate using [Riverpod](https://riverpod.dev) for state management. This template is designed to help you quickly start new Flutter projects with a solid architecture and modern best practices.
+**Pomakspo** is a mobile fitness app developed for a client, focused on promoting physical activity, community-driven challenges, and transparent charitable giving.
 
----
+Current design in [Figma](https://www.figma.com/design/C8yvnqFmMnxJa8Vv8ZTG3J/Pomakspo?node-id=0-1&p=f&t=hCREZfZHbcPHKU9j-0)
 
-## 🛠️ Tech Stack
+## 🎯 Key Features
+- **Leaderboard competitions** based on GPS-tracked performance (distance, time, etc.).
+- **Paid challenges** with badges and rewards for completing activity goals.
+- **Charity-focused funding** – 100% of challenge entry fees go to a transparent account supporting people with disabilities. No profit is taken.
+- **Gamification** through badges, XP, and personal achievement stats.
+- **Offline mode** support – record activities even without internet and sync later.
+- **Clean and intuitive UI**, designed for quick access to key features.
 
-- **Flutter**
-- **Riverpod** for state management
-- **GoRouter** for navigation
-- **Custom theme setup**
+## 📱 Platforms & Tech
+- Mobile-first (iOS & Android)
+- GPS tracking with OpenStreetMap support
+- Authentication via Google, Apple, or email
 
----
-
-## 📁 Folder Structure
-
-```
-lib/
-├── env/                   # Env files
-├── src/
-│   ├── core/
-│   │   ├── common/        # Shared widgets & components
-│   │   ├── db/            # Database layer
-│   │   ├── error/         # Error handling
-│   │   ├── extensions/    # Extension methods
-│   │   ├── resources/     # Assets, strings, colors
-│   │   ├── routing/       # GoRouter setup
-│   │   ├── theme/         # App theming
-│   │   └── utils/         # Helper methods
-│   ├── features/          # Feature-based structure
-│   ├── app.dart           # App widget
-├── main.dart              # Entry point
-└── test_screen.dart       # Sample screen for testing very specific cases
-```
-
----
-
-## 🚀 Getting Started
-
-1. **Clone the repo**
-   ```bash
-   git clone https://github.com/your-username/flutter_boilerplate.git
-   ```
-
-2. **Install dependencies**
-   ```bash
-   flutter pub get
-   ```
-
-3. **Run the app**
-   ```bash
-   flutter run
-   ```
-
----
-
-## ✅ What to Do After Cloning
-
-1. **Check Your Environment**  
-   Run the following command to ensure your Flutter setup is complete and compatible:  
-   ```bash
-   flutter doctor
-   ```
-
-2. **Configure Environment Variables**  
-   Create and fill the `.env` file located at `lib/env/.env` with the required keys. These are required for the app to run properly and access external services:
-
-   - `SUPABASE_*` – Supabase project credentials  
-   - `SENTRY_DSN` – Sentry connection string for error tracking  
-   - `POWERSYNC_*` – PowerSync-related credentials (if applicable)
+## 💡 Inspiration
+Inspired by apps like *EPP – Pomáhej pohybem*, *Virtualnibeh.cz*, and classic trackers like *Endomondo*.

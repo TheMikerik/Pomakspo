@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/src/core/routing/app_startup.dart';
-import 'package:flutter_boilerplate/src/core/routing/router.dart';
-import 'package:flutter_boilerplate/src/core/theme/theme.dart';
-import 'package:flutter_boilerplate/src/core/theme/theme_mode_provider.dart';
+import 'package:pomakspo/src/core/routing/app_startup.dart';
+import 'package:pomakspo/src/core/routing/router.dart';
+import 'package:pomakspo/src/core/theme/theme.dart';
+import 'package:pomakspo/src/core/theme/theme_mode_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 class App extends ConsumerWidget {

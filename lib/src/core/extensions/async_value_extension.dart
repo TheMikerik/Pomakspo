@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/src/core/error/app_exception.dart';
-import 'package:flutter_boilerplate/src/core/utils/alert_dialogs.dart';
+import 'package:pomakspo/src/core/error/app_exception.dart';
+import 'package:pomakspo/src/core/utils/alert_dialogs.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';

@@ -1,7 +1,7 @@
 import 'dart:io';
 
-import 'package:flutter_boilerplate/env/env.dart';
-import 'package:flutter_boilerplate/env/flavor.dart';
+import 'package:pomakspo/env/env.dart';
+import 'package:pomakspo/env/flavor.dart';
 import 'package:powersync/powersync.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 

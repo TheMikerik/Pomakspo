@@ -1,6 +1,6 @@
-import 'package:flutter_boilerplate/src/core/error/app_error.dart';
-import 'package:flutter_boilerplate/src/core/error/app_exception.dart';
-import 'package:flutter_boilerplate/src/core/error/error_logger.dart';
+import 'package:pomakspo/src/core/error/app_error.dart';
+import 'package:pomakspo/src/core/error/app_exception.dart';
+import 'package:pomakspo/src/core/error/error_logger.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 /// Error logger class to keep track of all AsyncError states that are set

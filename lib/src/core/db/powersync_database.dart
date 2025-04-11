@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_boilerplate/src/core/db/schema.dart';
-import 'package:flutter_boilerplate/src/core/db/supabase_connector.dart';
-import 'package:flutter_boilerplate/src/core/error/app_error.dart';
+import 'package:pomakspo/src/core/db/schema.dart';
+import 'package:pomakspo/src/core/db/supabase_connector.dart';
+import 'package:pomakspo/src/core/error/app_error.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:powersync/powersync.dart';

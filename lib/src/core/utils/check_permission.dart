@@ -1,4 +1,4 @@
-import 'package:flutter_boilerplate/src/core/error/app_exception.dart';
+import 'package:pomakspo/src/core/error/app_exception.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 Future<void> checkPermission(Permission permission) async {

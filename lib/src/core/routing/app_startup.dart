@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/src/core/common/providers/connection_status_provider.dart';
-import 'package:flutter_boilerplate/src/core/common/widgets/buttons/primary_button.dart';
-import 'package:flutter_boilerplate/src/core/extensions/theme_data_extension.dart';
-import 'package:flutter_boilerplate/src/core/resources/assets.dart';
+import 'package:pomakspo/src/core/common/providers/connection_status_provider.dart';
+import 'package:pomakspo/src/core/common/widgets/buttons/primary_button.dart';
+import 'package:pomakspo/src/core/extensions/theme_data_extension.dart';
+import 'package:pomakspo/src/core/resources/assets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 

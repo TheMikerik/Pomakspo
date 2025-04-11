@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/src/core/common/widgets/buttons/primary_button.dart';
-import 'package:flutter_boilerplate/src/features/home/presentation/home_screen.dart';
+import 'package:pomakspo/src/core/common/widgets/buttons/primary_button.dart';
+import 'package:pomakspo/src/features/home/presentation/home_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 

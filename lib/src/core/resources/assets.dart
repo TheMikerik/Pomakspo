@@ -1,4 +1,4 @@
-import 'package:flutter_boilerplate/src/core/resources/base.dart';
+import 'package:pomakspo/src/core/resources/base.dart';
 import 'package:flutter_svg/svg.dart';
 
 class LogoAssets {

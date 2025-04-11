@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate/src/core/extensions/theme_data_extension.dart';
+import 'package:pomakspo/src/core/extensions/theme_data_extension.dart';
 import 'package:hugeicons/hugeicons.dart';
 
 extension ContextExtension on BuildContext {
