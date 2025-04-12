@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class SettingsScreen extends ConsumerWidget {
-  const SettingsScreen({super.key});
+class AccountScreen extends ConsumerWidget {
+  const AccountScreen({super.key});
 
-  static const routePath = '/settings';
-  static const name = 'settings';
+  static const routePath = '/account';
+  static const name = 'account';
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Scaffold(
         body: Center(
-      child: Text("Settings page"),
+      child: Text("Account page"),
     ));
   }
 }

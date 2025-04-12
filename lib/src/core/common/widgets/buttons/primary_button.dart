@@ -9,9 +9,12 @@ class PrimaryButton extends ConsumerWidget {
     this.isLoading = false,
     this.height = 60,
     this.borderRadius = 16,
-    this.backgroundColor,
-    this.foregroundColor,
+    this.expanded = true,
+    this.outlined = false,
+    this.color,
+    this.textColor,
     this.onPressed,
+    this.icon,
     super.key,
   });
 
@@ -19,57 +22,92 @@ class PrimaryButton extends ConsumerWidget {
   final bool isLoading;
   final double height;
   final double borderRadius;
+  final bool expanded;
+  final bool outlined;
   final VoidCallback? onPressed;
-  final Color? backgroundColor;
-  final Color? foregroundColor;
+  final Color? color;
+  final Color? textColor;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return SizedBox(
-      width: double.infinity,
+      width: expanded ? double.infinity : null,
       height: height,
-      child: FilledButton(
-        style: ButtonStyle(
-          backgroundColor: isLoading
-              ? WidgetStateProperty.all<Color>(
-                  backgroundColor?.withAlpha(80) ??
-                      context.c.primary.withAlpha(80),
-                )
-              : WidgetStateProperty.all<Color>(
-                  backgroundColor ?? context.c.primary,
+      child: outlined
+          ? OutlinedButton(
+              style: ButtonStyle(
+                side: WidgetStateProperty.all(
+                  BorderSide(color: color ?? context.c.primary),
                 ),
-          shape: WidgetStateProperty.all<OutlinedBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(borderRadius),
+                  ),
+                ),
+              ),
+              onPressed: isLoading
+                  ? null
+                  : () {
+                      if (onPressed != null) {
+                        ref.read(hapticProvider.notifier).vibrate();
+                        onPressed!();
+                      }
+                    },
+              child: _buildContent(context),
+            )
+          : FilledButton(
+              style: ButtonStyle(
+                backgroundColor: WidgetStateProperty.all<Color>(
+                  isLoading
+                      ? (color?.withAlpha(80) ??
+                          context.c.primary.withAlpha(80))
+                      : (color ?? context.c.primary),
+                ),
+                shape: WidgetStateProperty.all(
+                  RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(borderRadius),
+                  ),
+                ),
+              ),
+              onPressed: isLoading
+                  ? null
+                  : () {
+                      if (onPressed != null) {
+                        ref.read(hapticProvider.notifier).vibrate();
+                        onPressed!();
+                      }
+                    },
+              child: _buildContent(context),
             ),
+    );
+  }
+
+  Widget _buildContent(BuildContext context) {
+    final Color effectiveTextColor = isLoading
+        ? (textColor?.withAlpha(75) ?? context.c.surface)
+        : (textColor ?? (outlined ? context.c.primary : context.c.onPrimary));
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (icon != null) ...[
+          Icon(
+            icon,
+            color: effectiveTextColor,
+            size: 30,
+          ),
+          const SizedBox(width: 8),
+        ],
+        Text(
+          text,
+          textAlign: TextAlign.center,
+          style: context.t.bodyLarge!.copyWith(
+            color: effectiveTextColor,
           ),
         ),
-        onPressed: isLoading
-            ? null
-            : () {
-                if (onPressed != null) {
-                  ref.read(hapticProvider.notifier).vibrate();
-                  onPressed!();
-                }
-              },
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              text,
-              textAlign: TextAlign.center,
-              style: isLoading
-                  ? context.t.bodyLarge!.copyWith(
-                      color:
-                          foregroundColor?.withAlpha(75) ?? context.c.surface,
-                    )
-                  : context.t.bodyLarge!.copyWith(
-                      color: foregroundColor ?? context.c.onPrimary,
-                    ),
-            ),
-          ],
-        ),
-      ),
+      ],
     );
   }
 }

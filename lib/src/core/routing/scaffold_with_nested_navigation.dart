@@ -33,11 +33,23 @@ class ScaffoldWithNestedNavigation extends StatelessWidget {
         items: [
           BottomNavigationBarItem(
             icon: HugeIcon(
-              icon: HugeIcons.strokeRoundedHome04,
+              icon: HugeIcons.strokeRoundedChampion,
               color: context.c.onSurface.withAlpha(150),
             ),
             activeIcon: HugeIcon(
-              icon: HugeIcons.strokeRoundedHome04,
+              icon: HugeIcons.strokeRoundedChampion,
+              color: context.c.onSurface,
+              size: 30,
+            ),
+          ),
+
+          BottomNavigationBarItem(
+            icon: HugeIcon(
+              icon: HugeIcons.strokeRoundedHome09,
+              color: context.c.onSurface.withAlpha(150),
+            ),
+            activeIcon: HugeIcon(
+              icon: HugeIcons.strokeRoundedHome09,
               color: context.c.onSurface,
               size: 30,
             ),
@@ -46,11 +58,11 @@ class ScaffoldWithNestedNavigation extends StatelessWidget {
           // Settings tab
           BottomNavigationBarItem(
             icon: HugeIcon(
-              icon: HugeIcons.strokeRoundedSettings01,
+              icon: HugeIcons.strokeRoundedUser,
               color: context.c.onSurface.withAlpha(150),
             ),
             activeIcon: HugeIcon(
-              icon: HugeIcons.strokeRoundedSettings01,
+              icon: HugeIcons.strokeRoundedUser,
               color: context.c.onSurface,
               size: 30,
             ),

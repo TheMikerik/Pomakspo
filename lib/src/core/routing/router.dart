@@ -3,7 +3,8 @@ import 'package:pomakspo/src/core/routing/app_startup.dart';
 import 'package:pomakspo/src/core/routing/scaffold_with_nested_navigation.dart';
 import 'package:pomakspo/src/features/auth/presentation/auth_screen.dart';
 import 'package:pomakspo/src/features/home/presentation/home_screen.dart';
-import 'package:pomakspo/src/features/settings/presentation/settings_screen.dart';
+import 'package:pomakspo/src/features/leaderboard/presentation/leaderboard_screen.dart';
+import 'package:pomakspo/src/features/account/presentation/account_screen.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -13,8 +14,12 @@ part 'router.g.dart';
 
 // private navigators
 final _rootNavigatorKey = GlobalKey<NavigatorState>();
-final _decksNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'decks');
-final _settingsNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'settings');
+// final _decksNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'decks');
+// final _settingsNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'settings');
+final _leaderboardNavigatorKey =
+    GlobalKey<NavigatorState>(debugLabel: 'leaderboard');
+final _homeNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'homescreen');
+final _accountNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'account');
 
 // https://github.com/bizz84/starter_architecture_flutter_firebase/blob/master/lib/src/routing/app_router.dart
 @riverpod
@@ -83,13 +88,13 @@ GoRouter goRouter(Ref ref) {
         ),
         branches: [
           StatefulShellBranch(
-            navigatorKey: _decksNavigatorKey,
+            navigatorKey: _leaderboardNavigatorKey,
             routes: [
               GoRoute(
-                path: HomeScreen.routePath,
-                name: HomeScreen.name,
+                path: LeaderboardScreen.routePath,
+                name: LeaderboardScreen.name,
                 pageBuilder: (context, state) => const NoTransitionPage(
-                  child: HomeScreen(),
+                  child: LeaderboardScreen(),
                 ),
                 routes: [
                   // GoRoute(
@@ -110,13 +115,13 @@ GoRouter goRouter(Ref ref) {
             ],
           ),
           StatefulShellBranch(
-            navigatorKey: _settingsNavigatorKey,
+            navigatorKey: _homeNavigatorKey,
             routes: [
               GoRoute(
-                path: SettingsScreen.routePath,
-                name: SettingsScreen.name,
+                path: HomeScreen.routePath,
+                name: HomeScreen.name,
                 pageBuilder: (context, state) => const NoTransitionPage(
-                  child: SettingsScreen(),
+                  child: HomeScreen(),
                 ),
                 routes: [
                   // GoRoute(
@@ -129,6 +134,19 @@ GoRouter goRouter(Ref ref) {
                   //   },
                   // ),
                 ],
+              ),
+            ],
+          ),
+          StatefulShellBranch(
+            navigatorKey: _accountNavigatorKey,
+            routes: [
+              GoRoute(
+                path: AccountScreen.routePath,
+                name: AccountScreen.name,
+                pageBuilder: (context, state) => const NoTransitionPage(
+                  child: AccountScreen(),
+                ),
+                routes: [],
               ),
             ],
           ),
