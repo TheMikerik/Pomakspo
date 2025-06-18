@@ -8,6 +8,7 @@ class LogoAssets {
 
   static const appleLogo = '$_base/apple-logo.png';
   static const googleLogo = '$_base/google-logo.png';
+  static const companyPinkLogo = '$_base/company_pink.png';
 }
 
 class SvgAssets {
