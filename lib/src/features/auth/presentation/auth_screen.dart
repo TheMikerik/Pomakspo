@@ -26,7 +26,7 @@ class AuthScreen extends ConsumerWidget {
     final state = ref.watch(authControllerProvider);
 
     return Scaffold(
-      backgroundColor: const Color(0xFF161531),
+      backgroundColor: context.c.primary,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(16),
@@ -100,6 +100,7 @@ class AuthScreen extends ConsumerWidget {
         ),
         const Spacer(),
         PrimaryButton(
+          color: context.c.primaryContainer,
           outlined: true,
           text: 'skip',
           onPressed: () => context.goNamed(HomeScreen.name),

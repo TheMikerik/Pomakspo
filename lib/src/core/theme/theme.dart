@@ -8,8 +8,8 @@ class AppTheme {
 // In that case remove them after copying this theme to your app.
   static final lightMode = FlexThemeData.light(
     colors: const FlexSchemeColor(
-      primary: Color(0xff5959c1),
-      primaryContainer: Color(0xffd6d6f5),
+      primary: Color(0xff161531),
+      primaryContainer: Color.fromARGB(255, 72, 66, 228),
       secondary: Color(0xff3d3a69),
       secondaryContainer: Color(0xffcfcbe1),
       tertiary: Color(0xfff09d45),
